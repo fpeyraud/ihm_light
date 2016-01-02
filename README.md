@@ -6,7 +6,7 @@ Basic MMI (IHM) for Tryphon racks
 Composed of 2 buttons and 4 multi-color LEDs, this interface can be used to
 - boot a computer,
 - trigger the reset button
-- trigger an NIM (short PWON button press)
+- trigger an NMI (short PWON button press)
 - trigger a forced shutdown (long PWON button press)
 - send button down and button up events to the computer via an USB serial connection
 - light LEDs individually or all at once according to commands sent via the USB serial connection
@@ -26,10 +26,19 @@ When established, the board acts on the following commands
   * 0 : Off
   * R : Red
   * G : Green
+  * B : Blue
   * O : Orange
+  * P : Purple
+  * C : Cyan
+  * W : White
   * r : blinking red
   * g : blinking green
+  * b : blinking blue
   * o : blinking orange
+  * p : blinking purple
+  * c : blinking cyan
+  * w : blinking white
+* `BRn` : Set brightness from 0 (min) to 15 (max)
 * `SLnc` : Light one LED number n with color c as desribed above
 * `PWOFF` : Trigger a hard Power Off 
 * `RESET` : Trigger the reset button
@@ -47,4 +56,4 @@ When no button is pressed for a certain time after entering the menu, it is auto
 
 ## And....
 
-and that's all it does so far. Of course we could add a lot more, starting with full RGB color support. This will probably be done soon, but for the time being, it just fits my need ;) Feel free to fork and pull request. Thanks for your attendance ;)
+and that's all it does so far. Of course we could add a lot more, but for the time being, it just fits my need ;) Feel free to fork and pull request. Thanks for your attendance ;)
